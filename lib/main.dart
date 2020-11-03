@@ -39,8 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
             clipBehavior: Clip.antiAlias,
             child: Column(
               children: [
+                Image.network("https://picsum.photos/250?image=9"),
                 ListTile(
-                  leading: Image.network("http://basta.lt/images/0.jpg"),
+
                   title: const Text('You TV Bill'),
                   subtitle: Text(
                     'Secondary Text',
@@ -71,7 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                Image.asset('assets/card-sample-image.jpg'),
               ],
             ),
           ),
@@ -79,11 +79,12 @@ class _MyHomePageState extends State<MyHomePage> {
             clipBehavior: Clip.antiAlias,
             child: Column(
               children: [
+                Image.network("http://basta.lt/images/8.jpg",),
+
                 ListTile(
-                  leading: Icon(Icons.arrow_drop_down_circle),
-                  title: const Text('Card title 1'),
+                  title: const Text('Message Center'),
                   subtitle: Text(
-                    'Secondary Text',
+                    'You have 0 messages',
                     style: TextStyle(color: Colors.black.withOpacity(0.6)),
                   ),
                 ),
@@ -111,7 +112,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                Image.asset('assets/card-sample-image-2.jpg'),
               ],
             ),
           ),
