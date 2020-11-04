@@ -32,6 +32,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_driver:
+      sdk: flutter
+  test: ^1.14.4 # add tests
+  image_test_utils: ^1.0.0 # mock images to pass unit test cause otherwise it returns 400 on network request
+  #lint: ^1.0.0 #lint
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

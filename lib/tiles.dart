@@ -12,7 +12,7 @@ class _BillTileState extends State<BillTile> {
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
-          Image.network("https://picsum.photos/250?image=9"),
+          Image.network("http://basta.lt/images/8.jpg"),
           ListTile(
             title: const Text('Your TV Bill'),
             subtitle: Text(
