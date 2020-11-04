@@ -14,7 +14,7 @@ class _BillTileState extends State<BillTile> {
         children: [
           Image.network("https://picsum.photos/250?image=9"),
           ListTile(
-            title: const Text('You TV Bill'),
+            title: const Text('Your TV Bill'),
             subtitle: Text(
               'Secondary Text',
               style: TextStyle(color: Colors.black.withOpacity(0.6)),

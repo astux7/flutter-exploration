@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'tiles.dart';
 import 'navigation.dart';
+import 'heroTile.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView(
           children: [
+            HeroTile(),
             BillTile(),
             MessageCenterTile()
           ],
