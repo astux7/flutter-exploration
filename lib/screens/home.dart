@@ -9,8 +9,8 @@ class HomeHub extends StatelessWidget {
   return ListView(
     children: [
       HeroTile(),
-      BillTile(),
-     // MessageCenterTile()
+      SkyVipTile(),
+      MessageCenterTile()
     ],
   );
 }

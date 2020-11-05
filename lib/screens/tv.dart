@@ -6,7 +6,7 @@ class TvHub extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        MessageCenterTile()
+        SkyBoxTile()
       ],
     );
   }
