@@ -34,8 +34,12 @@ class _HeroTileState extends State<HeroTile> {
                 ),
               ),
             ),
-            Text(
-                "This is some body text that I would like to see if it would trail over or not..."),
+            Container(
+                margin: EdgeInsets.only(top: 16),
+                child: Text(
+                    "This is some body text that I would like to see if it would trail over or not...",
+                )
+            ),
             Row(
               children: [
                 Expanded(
