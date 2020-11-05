@@ -7,24 +7,45 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:home_hub/main.dart';
+import 'package:image_test_utils/image_test_utils.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+  group('Hubs', () {
+    testWidgets('Hubs home smoke test', (WidgetTester tester) async {
+      provideMockedNetworkImages(() async {
+        // build hubs
+        await tester.pumpWidget(Hubs());
+        await tester.pump();
+        // verify
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+        expect(find.text('Title'), findsOneWidget);
+        expect(find.text('Message Center'), findsNothing);
+      });
+    });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    testWidgets('Hubs tv smoke test', (WidgetTester tester) async {
+      provideMockedNetworkImages(() async {
+        // build tv
+        await tester.pumpWidget(Hubs());
+        await tester.tap(find.byIcon(Icons.tv));
+        await tester.pump();
+        // verify
+        expect(find.text('Title'), findsNothing);
+        expect(find.text('Message Center'), findsOneWidget);
+      });
+    });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    testWidgets('Hubs vip smoke test', (WidgetTester tester) async {
+      provideMockedNetworkImages(() async {
+        // build vip
+        await tester.pumpWidget(Hubs());
+        await tester.tap(find.byIcon(Icons.face_unlock_sharp));
+        await tester.pump();
+        // Verify
+        expect(find.text('Title'), findsNothing);
+        expect(find.text('Message Center'), findsNothing);
+      });
+    });
   });
 }

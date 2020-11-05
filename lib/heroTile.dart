@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:lint/analysis_options.yaml';
 
 class HeroTile extends StatefulWidget {
   @override
@@ -29,7 +30,7 @@ class _HeroTileState extends State<HeroTile> {
               height: 300,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage("https://picsum.photos/250?image=9"),
+                    image: NetworkImage("http://basta.lt/images/8.jpg"),
                     fit: BoxFit.fill
                 ),
               ),
