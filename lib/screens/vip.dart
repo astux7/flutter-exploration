@@ -6,7 +6,7 @@ class VipHub extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        MessageCenterTile()
+        BillTile()
       ],
     );
   }

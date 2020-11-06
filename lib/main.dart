@@ -14,7 +14,7 @@ class Hubs extends StatefulWidget {
 }
 class HubsState extends State<Hubs> {
   int currentIndex = 0;
-  final _currentIndex = [HomeHub(), TvHub(), VipHub(), Empty(), Empty()];
+  final _currentIndex = [HomeHub(), TvHub(), Empty(), Empty(), VipHub()];
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;

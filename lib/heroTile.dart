@@ -30,7 +30,7 @@ class _HeroTileState extends State<HeroTile> {
               height: 300,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage("http://basta.lt/images/8.jpg"),
+                    image: NetworkImage("https://assets.contentstack.io/v3/assets/blt67d444169971fbeb/blt612f746319908583/5f29143fc9ec57071816c87e/TV_engineer_video_still.jpg"),
                     fit: BoxFit.fill
                 ),
               ),
