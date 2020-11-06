@@ -19,8 +19,8 @@ void main() {
         await tester.pump();
         // verify
 
-        expect(find.text('Title'), findsOneWidget);
-        expect(find.text('Message Center'), findsNothing);
+        expect(find.text('Message Center'), findsOneWidget);
+        expect(find.text('Sky Cinema'), findsNothing);
       });
     });
 
@@ -31,8 +31,8 @@ void main() {
         await tester.tap(find.byIcon(Icons.tv));
         await tester.pump();
         // verify
-        expect(find.text('Title'), findsNothing);
-        expect(find.text('Message Center'), findsOneWidget);
+        expect(find.text('Message Center'), findsNothing);
+        expect(find.text('Sky Cinema'), findsOneWidget);
       });
     });
 
@@ -43,7 +43,7 @@ void main() {
         await tester.tap(find.byIcon(Icons.face_unlock_sharp));
         await tester.pump();
         // Verify
-        expect(find.text('Title'), findsNothing);
+        expect(find.text('Sky Cinema'), findsNothing);
         expect(find.text('Message Center'), findsNothing);
       });
     });
