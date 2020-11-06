@@ -5,9 +5,8 @@ class BottomNavBar extends StatefulWidget {
   _BottomNavBarState createState() => _BottomNavBarState();
 }
 
-class _BottomNavBarState extends State<BottomNavBar> {
+class _BottomNavBarState extends State<BottomNavBar> with SingleTickerProviderStateMixin{
   int _currentIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -23,23 +22,30 @@ class _BottomNavBarState extends State<BottomNavBar> {
       unselectedLabelStyle: textTheme.caption,
       onTap: (value) {
         // Respond to item press.
+
         setState(() => _currentIndex = value);
       },
       items: [
         BottomNavigationBarItem(
-          title: Text('TV'),
-          icon: Icon(Icons.tv),
+          label: 'Home',
+          icon: Icon(Icons.home),
+
         ),
         BottomNavigationBarItem(
-          title: Text('BB'),
+          label: 'TV',
+          icon: Icon(Icons.tv),
+
+        ),
+        BottomNavigationBarItem(
+          label: 'BB',
           icon: Icon(Icons.network_wifi),
         ),
         BottomNavigationBarItem(
-          title: Text('Mobile'),
+          label: 'Mobile',
           icon: Icon(Icons.mobile_friendly_outlined),
         ),
         BottomNavigationBarItem(
-          title: Text('VIP'),
+          label: 'VIP',
           icon: Icon(Icons.face_unlock_sharp),
         ),
       ],
