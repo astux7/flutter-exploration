@@ -9,8 +9,7 @@ class HomeHub extends StatelessWidget {
     return HeroPage.withWidgets(
         [
           SkyVipTile(),
-          MessageCenterTile(),
-          MessageCenterTile(),
+          BillTile(),
           MessageCenterTile()
         ],
       355
