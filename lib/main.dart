@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:home_hub/screens/empty.dart';
 import 'package:home_hub/screens/home.dart';
 import 'package:home_hub/screens/tv.dart';
-import 'package:home_hub/screens/vip.dart';
-import 'package:home_hub/screens/markdownHub.dart';
-//import 'package:lint/analysis_options.yaml';
-import 'MarkdownMain.dart';
+import 'package:home_hub/screens/markdown_vip.dart';
 
-//void main() => runApp(MarkDownPage());
 void main() => runApp(Hubs());
 
 class Hubs extends StatefulWidget {
@@ -17,7 +13,7 @@ class Hubs extends StatefulWidget {
 class HubsState extends State<Hubs> {
   int currentIndex = 0;
   final _currentIndex = [HomeHub(), TvHub(), Empty(),  Empty(), MarkdownVip(),];
-  final _currentAppTitle = [null, "TV", "BB", "Mobile", null ];
+  final _currentAppBarTitle = [null, "TV", "BB", "Mobile", null ];
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -25,8 +21,9 @@ class HubsState extends State<Hubs> {
     return MaterialApp(
       title: 'Hubs',
       home: Scaffold(
-        appBar: _currentAppTitle[currentIndex] == null ? null : AppBar(
-            title: Text(_currentAppTitle[currentIndex])
+          backgroundColor: Color(0xFFF9F9F9),
+        appBar: _currentAppBarTitle[currentIndex] == null ? null : AppBar(
+            title: Text(_currentAppBarTitle[currentIndex])
         ),
         body: _currentIndex[currentIndex],
         bottomNavigationBar:  BottomNavigationBar(
@@ -39,7 +36,6 @@ class HubsState extends State<Hubs> {
           unselectedLabelStyle: textTheme.caption,
           onTap: (value) {
             // Respond to item press.
-
             setState(() => currentIndex = value);
           },
           items: [

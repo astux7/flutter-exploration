@@ -26,11 +26,11 @@ class _HeroPageState extends State<HeroPage> {
     return CustomScrollView (
       slivers: [
         SliverAppBar(
-          backgroundColor: Colors.black12,
-          title: Center(child: Text("Title")),
-          expandedHeight: 301,
+          backgroundColor: Colors.black,
+          title: Center(child: Text("SKY")),
+          expandedHeight: 320,
           bottom: PreferredSize(                       // Add this code
-            preferredSize: Size.fromHeight(61.0),      // Add this code
+            preferredSize: Size.fromHeight(10.0),      // Add this code
             child: Text(''),                           // Add this code
           ),                                           // Add this code
           flexibleSpace: FlexibleSpaceBar(
@@ -39,7 +39,9 @@ class _HeroPageState extends State<HeroPage> {
                       children: [
                         Image.network("https://images.contentstack.io/v3/assets/blt67d444169971fbeb/bltcdc721a8156cf5ae/5f3cdcc43ebefc321efdcf5c/MSA_Product_Tiles_Sports_PremierLeague.jpg"),
                         Container(
-                            child: Text("This is some body text here to see how it responds to a very long section of text."),
+                            child: Text("This is some body text here to see how it responds to a very long section of text.", style: TextStyle(color: Colors.white,
+                              fontSize: 14.0,
+                            )),
                             margin: EdgeInsets.fromLTRB(8, 8, 0, 0)
                         ),
                         Row(
@@ -50,10 +52,10 @@ class _HeroPageState extends State<HeroPage> {
                                     margin: EdgeInsets.all(8),
                                     child: FlatButton(
                                       color: Colors.blue,
-                                      child: Center(child: Text("Primary")),
-                                      onPressed: () {
-
-                                      },
+                                      child: Center(child: Text("Go to Sky Go",  style: TextStyle(color: Colors.white,
+                                        fontSize: 14.0,
+                                      ))),
+                                      onPressed: () {},
                                     )
                                 )
                             ),
@@ -64,10 +66,10 @@ class _HeroPageState extends State<HeroPage> {
                                     margin: EdgeInsets.all(8),
                                     child: FlatButton(
                                       color: Colors.blue,
-                                      child: Center(child: Text("Secondary")),
-                                      onPressed: () {
-
-                                      },
+                                      child: Center(child: Text("Download Sky Go",  style: TextStyle(color: Colors.white,
+                                        fontSize: 14.0,
+                                      ))),
+                                      onPressed: () {},
                                     )
                                 )
                             )

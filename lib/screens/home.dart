@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../tiles.dart';
-import '../HeroPage.dart';
+import '../screens/hero_page.dart';
 
 
 class HomeHub extends StatelessWidget {
@@ -10,17 +10,14 @@ class HomeHub extends StatelessWidget {
         [
           SkyVipTile(),
           BillTile(),
+          MessageCenterTile(),
+          BillTile(),
+          MessageCenterTile(),
+          BillTile(),
           MessageCenterTile()
         ],
       355
     );
-  // return ListView(
-  //   children: [
-  //     HeroTile(),
-  //     SkyVipTile(),
-  //     MessageCenterTile()
-  //   ],
-  // );
-}
+  }
 }
 
