@@ -152,18 +152,23 @@ class SkyVipTile extends StatefulWidget {
 class _SkyVipTileState extends State<SkyVipTile> {
   @override
   Widget build(BuildContext context) {
+
     return Card(
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
           Image.network("https://assets.contentstack.io/v3/assets/blt67d444169971fbeb/blt26310b84a7afdc9b/5e580e339c1f570dcb33e912/EPG_-_Q_Top_Picks_-_HS_-_1428X803.jpg"),
           ListTile(
-            title: const Text(
-              'Join Sky Vip',
-              style: TextStyle(
-                fontSize: 20.0,
-              ),
-            ),
+             subtitle: SizedBox(
+                   height: 2,
+                  child: MarkdownBody(data: "asta **ASTA** asta")
+             )
+            // title: const Text(
+            //   'Join Sky Vip',
+            //   style: TextStyle(
+            //     fontSize: 20.0,
+            //   ),
+            // ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
