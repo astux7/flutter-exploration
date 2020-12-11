@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:home_hub/screens/ScreenOne.dart';
+import 'package:home_hub/screens/home.dart';
+import 'package:home_hub/screens/tv.dart';
 import 'package:home_hub/screens/ScreenTwo.dart';
-
 
 void main() => runApp(Hubs());
 
@@ -26,11 +26,11 @@ class HubsState extends State<Hubs> {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => FirstScreen(),
-        '/tv': (context) => SecondScreen(),
-        '/bb': (context) => SecondScreen(),
-        '/mobile': (context) => SecondScreen(),
-        '/vip': (context) => SecondScreen()
+        '/': (context) => HomeHub(),
+        '/tv': (context) => TvHub(),
+        '/bb': (context) => TvHub(),
+        '/mobile': (context) => TvHub(),
+        '/vip': (context) => TvHub()
       },
 
       // title: 'Hubs',
