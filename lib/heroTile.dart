@@ -15,7 +15,7 @@ class _HeroTileState extends State<HeroTile> {
           children: [
             Container(
               child: Text(
-                  "Title",
+                  "SKY",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 20,
@@ -38,7 +38,7 @@ class _HeroTileState extends State<HeroTile> {
             Container(
                 margin: EdgeInsets.only(top: 16),
                 child: Text(
-                    "This is some body text that I would like to see if it would trail over or not...",
+                    "This is some body text that I would like to see if it would trail over or not test...",
                 )
             ),
             Row(

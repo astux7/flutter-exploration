@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 
 class BillTile extends StatefulWidget {
   @override
@@ -15,7 +16,7 @@ class _BillTileState extends State<BillTile> {
         children: [
           ListTile(
             trailing: Image.network("https://static.skyassets.com/contentstack/assets/blt67d444169971fbeb/bltbfb3e789f0a415a1/5d94a166f465290ff354893d/bill_icon.png",) ,
-            title: const Text(
+            title:  Text(
               'Your TV Bill',
               style: TextStyle(
                 fontSize: 20.0,
@@ -66,9 +67,6 @@ class _BillTileState extends State<BillTile> {
     );
   }
 }
-
-
-
 
 // primary tile without buttons
 class MessageCenterTile extends StatefulWidget {
@@ -154,18 +152,24 @@ class SkyVipTile extends StatefulWidget {
 class _SkyVipTileState extends State<SkyVipTile> {
   @override
   Widget build(BuildContext context) {
+
     return Card(
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
           Image.network("https://assets.contentstack.io/v3/assets/blt67d444169971fbeb/blt26310b84a7afdc9b/5e580e339c1f570dcb33e912/EPG_-_Q_Top_Picks_-_HS_-_1428X803.jpg"),
           ListTile(
-            title: const Text(
-              'Join Sky Vip',
-              style: TextStyle(
-                fontSize: 20.0,
+              subtitle: Container(
+                      child: MarkdownBody(
+                          data: "This is **markdown** text",
+                          styleSheet: MarkdownStyleSheet(
+                              strong: TextStyle(color: Colors.blue)
+                          )
+                      )
               ),
-            ),
+              title: Container(
+                child: MarkdownBody(data:  "Join _Sky_ Vip")
+              ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
