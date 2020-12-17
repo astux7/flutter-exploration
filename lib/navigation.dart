@@ -7,6 +7,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> with SingleTickerProviderStateMixin{
   int _currentIndex = 0;
+  var barList = ['/', '/tv','/bb','/mobile', '/vip'];
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -21,9 +22,14 @@ class _BottomNavBarState extends State<BottomNavBar> with SingleTickerProviderSt
       selectedLabelStyle: textTheme.caption,
       unselectedLabelStyle: textTheme.caption,
       onTap: (value) {
-        // Respond to item press.
 
         setState(() => _currentIndex = value);
+
+    // Navigate to the second screen using a named route.
+       //  Navigator.pushNamed(context, barList[_currentIndex]);
+     //    Navigator.pushReplacementNamed(context,  barList[_currentIndex]);
+        Navigator.popAndPushNamed(context,  barList[_currentIndex]);
+
       },
       items: [
         BottomNavigationBarItem(
